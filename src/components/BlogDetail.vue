@@ -1,7 +1,9 @@
 <template>
-  <div class="flex flex-col gap-6">
+  <div class="flex flex-col gap-6 p-4">
     <h1 class="text-[#FF9EB5] text-5xl font-bold">{{ blog.title }}</h1>
-    <div class="content" v-html="blog.content"></div>
+    <p><small>Posted on: {{ blog.created_at }}</small></p>
+    <div class="content tracking-wide" v-html="blog.content"></div>
+    {{ blog.content }}
   </div>
 </template>
 
@@ -36,9 +38,17 @@ onMounted(fetchBlog)
   font-size: 18px;
 }
 .content h4 {
-  font-size: 16px;
+  font-size: 17px;
 }
 .content p {
-  font-size: 14px;
+  font-size: 16px;
+}
+.content table{
+  background-color: #3A3A3A;
+  border-radius: 5px;
+ 
+}
+.content td{
+  padding: 1rem;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div class="blog-list w-full p-5 bg-[#272727]">
-      <h1>Blog Posts</h1>
+      <!-- <h1>Blog Posts</h1> -->
       <div className = "bloglistcontainer">
         <div className = "blogindv p-0 border-b pb-2 border-[#ccc] mb-5" v-for="blog in blogs" :key="blog.id">
             <router-link :to="`/blog/${blog.slug}`">
