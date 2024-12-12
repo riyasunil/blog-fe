@@ -45,8 +45,8 @@ onMounted(fetchBlog)
 .content table{
   background-color: #3A3A3A;
   border-radius: 5px;
-  width: 100%; /* Makes the table full width of its container */
-  max-width: 100%; /* Ensures the table doesn't exceed its container */
+  width: 100%;
+  max-width: 100%; 
   table-layout: auto;
   overflow-x: auto;
   display: block;
@@ -54,4 +54,31 @@ onMounted(fetchBlog)
 .content td{
   padding: 1rem;
 }
+
+/* Scrollbar styling */
+.content table::-webkit-scrollbar {
+  width: 10px; 
+  height: 10px; 
+}
+
+.content table::-webkit-scrollbar-track {
+  background: #2C2C2C; 
+  border-radius: 5px; 
+}
+
+.content table::-webkit-scrollbar-thumb {
+  background: #565656; 
+  border-radius: 5px; 
+  border: 2px solid #3A3A3A; 
+}
+
+.content table::-webkit-scrollbar-thumb:hover {
+  background: #727272; 
+}
+
+.content table {
+  scrollbar-color: #565656 #2C2C2C; 
+  scrollbar-width: thin;
+}
+
 </style>
