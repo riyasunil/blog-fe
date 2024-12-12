@@ -3,7 +3,6 @@
     <h1 class="text-[#FF9EB5] text-5xl font-bold">{{ blog.title }}</h1>
     <p><small>Posted on: {{ blog.created_at }}</small></p>
     <div class="content tracking-wide" v-html="blog.content"></div>
-    {{ blog.content }}
   </div>
 </template>
 
