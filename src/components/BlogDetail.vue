@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col gap-6 p-4">
-    <h1 class="text-[#FF9EB5] text-5xl font-bold">{{ blog.title }}</h1>
+    <h1 class="text-[#FF9EB5] text-3xl md:text-5xl font-bold">{{ blog.title }}</h1>
     <p><small>Posted on: {{ blog.created_at }}</small></p>
     <div class="content tracking-wide" v-html="blog.content"></div>
   </div>
@@ -45,7 +45,11 @@ onMounted(fetchBlog)
 .content table{
   background-color: #3A3A3A;
   border-radius: 5px;
- 
+  width: 100%; /* Makes the table full width of its container */
+  max-width: 100%; /* Ensures the table doesn't exceed its container */
+  table-layout: auto;
+  overflow-x: auto;
+  display: block;
 }
 .content td{
   padding: 1rem;
